@@ -17,10 +17,7 @@ class Test_Add_User:
 
     #之后先点击添加用户按钮
     @pytest.fixture()
-    @allure.step('我是测试步骤001')
-    @pytest.allure.severity(pytest.allure.severity_level.CRITICAL)
     def test_001(self):
-        allure.attach('描述', '我是测试步骤001的描述～～～')
         self.obj_data.add_user_btn()
 
     #之后开始输入用户信息
