@@ -1,0 +1,31 @@
+#一个元素
+#animal: pets
+anima: {"ke1":"pets","key2":"app"} # python字典
+animals: ['data1', 'data2'] # python列表
+value: "hello"   #字符串
+value1: true     #布尔值Ture
+value2: false    #布尔值False
+value3: 12       #整数
+value4: 12.102   #浮点数
+value5: Null     #空
+value6: ~        #空
+value7: 2020-03-14   #日期
+value8: 2020-03-14 12:12:12   #日期和时分秒
+
+#定义一组登陆的账号密码
+Test_Login:
+  #锚点引用
+  sms_code: &code
+    code_info: 12345
+  login_data01:
+    name: lousifa
+    pwd: 123456
+    <<: *code #锚点引用
+  login_data02:
+    name: lipeixian
+    pwd: 123456
+    <<: *code
+  login_data03:
+    name: chenjiankang
+    pwd: 123456
+    <<: *code
